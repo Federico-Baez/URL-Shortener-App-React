@@ -4,7 +4,7 @@ import Dashboard from '../pure/Dashboard';
 import LinkShortenerFormik from '../pure/LinkShortenerFormik';
 import Footer from '../pure/Footer';
 import ListContainer from './ListContainer';
-import StatisticsContainer from './StatisticsContainer';
+import Statistics from '../pure/Statistics';
 
 //styles
 import "../../styles/pageStyle.scss"
@@ -15,7 +15,7 @@ const PageContainer = () => {
             <Header />
             <Dashboard />
             <ListContainer />
-            <StatisticsContainer />
+            <Statistics />
             <Footer />
         </div>
     );

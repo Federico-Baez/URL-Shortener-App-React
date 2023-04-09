@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
+//images
 import illustrationWorking from '../../design/images/illustration-working.svg';
 
 

@@ -59,6 +59,7 @@
 
         .Navigation {
             padding-left: 2rem;
+            margin: 0;
             color: hsl(257, 7%, 63%);
             display: flex;
             flex-direction: row;
@@ -101,12 +102,14 @@
         .title {
             margin: 6rem 0 0;
             font-size: 68px;
+            font-weight: 700;
         }
 
         .description {
             color: hsl(257, 7%, 63%);
             margin: .5rem 0 2rem;
             font-size: 20px;
+            font-weight: 500;
         }
 
         .primary-btn {
@@ -133,6 +136,7 @@
 .list-container {
     width: 100%;
     font-size: 14px;
+    margin-bottom: 2rem;
 
     //-shortener-
     .shortener {
@@ -228,6 +232,97 @@
             }
         }
 
+    }
+}
+
+//-STATISTICS CONTAINER-
+.statistics-container {
+    width: 100%;
+
+    .statistics-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+            font-weight: 700;
+        }
+
+        .description {
+            color: hsl(257, 7%, 63%);
+            width: 30rem;
+            text-align: center;
+        }
+
+    }
+
+    .divisor {
+        z-index: 10;
+        position: relative;
+        top: 9rem;
+        border: none;
+        height: 6px;
+        background: hsl(180, 66%, 49%);
+        opacity: 1;
+        margin: 1rem 2rem;
+    }
+
+    .card-container {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 100;
+
+
+        .statistic-card {
+            background-color: #FFF;
+            padding: 0 1.5rem 1.5rem;
+            border-radius: 5px;
+            width: 18.5rem;
+            height: 12.5rem;
+
+            .stat-card-img {
+                background-color: hsl(257, 27%, 26%);
+                border-radius: 5rem;
+                height: 3.6rem;
+                width: 3.6rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                bottom: 1.8rem;
+
+                img {
+                    height: 28px;
+
+                }
+
+                #img-3 {
+                    height: 32px;
+                }
+            }
+
+            .stat-card-title {
+                font-size: 18px;
+                font-weight: 700;
+                margin-bottom: .8rem;
+            }
+
+            .stat-card-description {
+                font-size: 13px;
+                color: hsl(257, 7%, 63%);
+            }
+        }
+
+        #card-2 {
+            position: relative;
+            top: 2.2rem;
+        }
+
+        #card-3 {
+            position: relative;
+            top: 4.4rem;
+        }
     }
 }
 
