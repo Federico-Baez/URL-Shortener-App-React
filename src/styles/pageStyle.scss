@@ -1,0 +1,235 @@
+.page-container {
+    max-width: 100vw;
+    min-height: 100vh;
+    margin: 0 11rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-items: center; */
+    align-items: center;
+    gap: 3rem;
+
+    button {
+        border: none;
+        transition: opacity 0.2s ease;
+
+        &:hover {
+            border: none;
+            opacity: .55;
+        }
+
+        &:active {
+            border: none;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+
+.primary-btn {
+    background: hsl(180, 66%, 49%);
+    border-radius: 2rem;
+    font-weight: 700;
+}
+
+.secondary-btn {
+    color: hsl(257, 7%, 63%);
+    background: transparent;
+    font-weight: 700;
+}
+
+
+
+//-HEADER-
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 3rem 0 0 0;
+
+    .logo-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .Navigation {
+            padding-left: 2rem;
+            color: hsl(257, 7%, 63%);
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            gap: 1.6rem;
+
+            li {
+                transition: color 0.2s ease;
+
+                &:hover {
+                    color: #000;
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
+
+
+    .log-buttons {
+
+        .primary-btn {
+            padding: .4rem 1.3rem;
+        }
+
+    }
+
+}
+
+//-DASHBOARD-
+.dashboard {
+    display: flex;
+    flex-direction: row;
+    height: 31rem;
+    width: 100%;
+
+    .dashboard-main {
+        width: 31.5rem;
+
+        .title {
+            margin: 6rem 0 0;
+            font-size: 68px;
+        }
+
+        .description {
+            color: hsl(257, 7%, 63%);
+            margin: .5rem 0 2rem;
+            font-size: 20px;
+        }
+
+        .primary-btn {
+            padding: .68rem 2rem;
+            font-size: 14px;
+        }
+    }
+
+    .dashboard-img {
+        position: absolute;
+        right: -8rem;
+        /* position: relative;
+        left: 12rem; */
+
+
+        img {
+            height: 480px;
+        }
+    }
+
+}
+
+//-LIST CONTAINER-
+.list-container {
+    width: 100%;
+    font-size: 14px;
+
+    //-shortener-
+    .shortener {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        height: 8.5rem;
+        background: hsl(257, 27%, 26%);
+        background-image: url("../design/images/bg-shorten-desktop.svg");
+        background-size: cover;
+        border-radius: 8px;
+        margin: 0 0 1rem;
+
+
+        .shortener-form {
+            display: flex;
+            gap: 1.2rem;
+            width: 100%;
+            padding: 2.75rem 5rem 0;
+
+            .input {
+                width: 100%;
+
+                .input-url {
+                    height: 3rem;
+                    background: #FFF;
+                    color: #000;
+                    padding: 1rem;
+                    border: none;
+                    border-radius: 6px;
+                    width: 100%;
+
+                    &:focus {
+                        outline: none;
+                        border: none;
+                    }
+                }
+            }
+
+            button {
+                border-radius: 6px;
+                height: 3rem;
+                width: 8rem;
+
+            }
+        }
+
+    }
+
+    .list-items-container {
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .item {
+                display: flex;
+                align-items: center;
+                background-color: #FFF;
+                border-radius: 5px;
+                height: 3.5rem;
+                padding: 0rem 1.6rem;
+                font-size: 14px;
+
+                .right-end-div {
+                    margin-left: auto;
+                    display: flex;
+                    align-items: center;
+
+                    .shortenedURL {
+                        color: hsl(180, 66%, 49%);
+                    }
+
+                    button {
+                        margin-left: 1.5rem;
+                        border-radius: 5px;
+                        height: 2rem;
+                        width: 5.2rem;
+                        font-size: 12px;
+
+                    }
+
+                    .copied-btn {
+                        background: hsl(257, 27%, 26%);
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+@media (max-width: 1225px) {}
