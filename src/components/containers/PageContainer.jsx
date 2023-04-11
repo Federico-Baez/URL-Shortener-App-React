@@ -12,10 +12,12 @@ import "../../styles/pageStyle.scss"
 const PageContainer = () => {
     return (
         <div className='page-container'>
-            <Header />
-            <Dashboard />
-            <ListContainer />
-            <Statistics />
+            <div className='page-body'>
+                <Header />
+                <Dashboard />
+                <ListContainer />
+                <Statistics />
+            </div>
             <Footer />
         </div>
     );
