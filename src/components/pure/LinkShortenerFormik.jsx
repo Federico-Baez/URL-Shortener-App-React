@@ -42,9 +42,9 @@ const LinkShortenerFormik = ({ add }) => {
                 {({ errors, touched }) => (
                     <Form className='shortener-form'>
                         <div className='input'>
-                            <Field className='input-url' id="URL" name="URL" placeholder="Shorten a link here..." type="text" />
+                            <Field className={(touched.URL && errors.URL) ? 'input-url-error' : 'input-url'} id="URL" name="URL" placeholder="Shorten a link here..." type="text" autocomplete="off" />
                             {/* URL errors */}
-                            {errors.URL && touched.URL && (<ErrorMessage name="URL" component="div" className="error-message" />)}
+                            {errors.URL && touched.URL && (<ErrorMessage style={{ color: "hsl(0, 87%, 67%)", fontWeight: "500", fontStyle: "italic" }} name="URL" component="div" className="error-message mt-1 font-italic" />)}
                         </div>
 
                         <button className='primary-btn' type="submit">Shorten It!</button>
