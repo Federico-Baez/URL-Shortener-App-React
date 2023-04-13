@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../pure/Header';
 import Dashboard from '../pure/Dashboard';
-import LinkShortenerFormik from '../pure/LinkShortenerFormik';
 import Footer from '../pure/Footer';
 import ListContainer from './ListContainer';
 import Statistics from '../pure/Statistics';
