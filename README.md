@@ -1,4 +1,4 @@
-# Shortly URL shortening API build on React based on a Frontend Mentor Challenge
+# Shortly URL shortening App, build on React, based on a Frontend Mentor Challenge
 
 ## The challenge
 
