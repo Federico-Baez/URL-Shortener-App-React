@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { Item } from '../../models/Item.class';
+import { shortenLink } from '../../services/axiosService';
 
 
 const LinkShortenerFormik = ({ add }) => {
@@ -11,6 +12,23 @@ const LinkShortenerFormik = ({ add }) => {
         // get all error message elements
         const errorMessages = document.getElementsByClassName("error-message");
     }, []);
+
+    //axios usage for shortcode API
+    const obtainShortenedLink = (OriginalURL) => {
+        /* shortenLink(`/shorten?url=${OriginalURL}`) */
+        shortenLink(`${OriginalURL}`)
+            .then((response) => {
+                if (response.status === 201) {
+                    const newItem = new Item(OriginalURL, response.data.result.short_link);
+                    add(newItem);
+                } else {
+                    throw new Error('Shortening link failed');
+                }
+            })
+            .catch((error) => {
+                alert(`Something went wrong shortening the link: ${error}`)
+            })
+    }
 
     const initialItemCredential = {
         URL: '',
@@ -34,8 +52,9 @@ const LinkShortenerFormik = ({ add }) => {
 
                 // onSubmit event
                 onSubmit={(values) => {
-                    const newItem = new Item(values.URL, values.shortenedURL);
-                    add(newItem);
+                    //const newItem = new Item(values.URL, values.shortenedURL);
+                    //add(newItem);
+                    obtainShortenedLink(values.URL);
                 }}
             >
 

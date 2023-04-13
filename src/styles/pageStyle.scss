@@ -442,8 +442,6 @@
             gap: 1.25rem;
 
             &:hover {
-                /* TODO: fix the fill issue */
-                fill: hsl(180, 66%, 49%);
                 cursor: pointer;
             }
         }

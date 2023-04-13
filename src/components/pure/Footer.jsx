@@ -49,6 +49,7 @@ const Footer = () => {
                 </div>
 
                 <div className='foot-media-div'>
+                    {/* TODO: add color change to the media logos -> hsl(180, 66%, 49%) */}
                     <img className='media-logo' src={fbLogo} alt="facebook logo" />
                     <img className='media-logo' src={twLogo} alt="twitter logo" />
                     <img className='media-logo' src={prLogo} alt="pinterest logo" />
