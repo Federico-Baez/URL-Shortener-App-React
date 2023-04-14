@@ -438,11 +438,20 @@
 
         .foot-media-div {
             display: flex;
+            align-items: center;
             height: 22.5px;
             gap: 1.25rem;
 
             &:hover {
                 cursor: pointer;
+            }
+
+            svg path {
+                padding-top: 2px;
+            }
+
+            svg:hover path {
+                fill: hsl(180, 66%, 49%);
             }
         }
 

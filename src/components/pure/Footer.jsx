@@ -2,10 +2,14 @@ import React from 'react';
 
 //images
 import logo from '../../design/images/logo-footer.svg';
-import fbLogo from '../../design/images/icon-facebook.svg';
-import twLogo from '../../design/images/icon-twitter.svg';
-import prLogo from '../../design/images/icon-pinterest.svg';
-import igLogo from '../../design/images/icon-instagram.svg';
+
+//Media Logos
+import FacebookLogo from '../../components/icons/facebookLogo';
+import TwitterLogo from '../icons/twitterLogo';
+import PinterestLogo from '../icons/pinterestLogo';
+import InstagramLogo from '../icons/instagramLogo';
+
+
 
 const Footer = () => {
     return (
@@ -49,11 +53,10 @@ const Footer = () => {
                 </div>
 
                 <div className='foot-media-div'>
-                    {/* TODO: add color change to the media logos -> hsl(180, 66%, 49%) */}
-                    <img className='media-logo' src={fbLogo} alt="facebook logo" />
-                    <img className='media-logo' src={twLogo} alt="twitter logo" />
-                    <img className='media-logo' src={prLogo} alt="pinterest logo" />
-                    <img className='media-logo' src={igLogo} alt="instagram logo" />
+                    <FacebookLogo />
+                    <TwitterLogo />
+                    <PinterestLogo />
+                    <InstagramLogo />
                 </div>
             </div>
         </footer>
