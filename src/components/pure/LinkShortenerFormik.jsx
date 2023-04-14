@@ -51,10 +51,9 @@ const LinkShortenerFormik = ({ add }) => {
                 validationSchema={ItemsFormSchema}
 
                 // onSubmit event
-                onSubmit={(values) => {
-                    //const newItem = new Item(values.URL, values.shortenedURL);
-                    //add(newItem);
+                onSubmit={(values, { resetForm }) => {
                     obtainShortenedLink(values.URL);
+                    resetForm();
                 }}
             >
 
