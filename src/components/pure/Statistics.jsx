@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 //images
 import StatImg1 from '../../design/images/icon-brand-recognition.svg'
@@ -58,11 +57,5 @@ const Statistics = () => {
         </div>
     );
 };
-
-
-Statistics.propTypes = {
-
-};
-
 
 export default Statistics;

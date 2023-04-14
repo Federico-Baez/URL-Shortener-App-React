@@ -1,4 +1,3 @@
 **TODOs:** 
-**1-Implement copy button** 
-**2-clearinput on submit** 
-**3-fix the media logo fill problem**
+**1-clearinput on submit** 
+**2-fix the media logo fill problem**

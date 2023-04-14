@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 
 const ItemComponent = ({ item }) => {
@@ -20,17 +20,14 @@ const ItemComponent = ({ item }) => {
             <span className='extendedURL'>{item.URL}</span>
             <div className='right-end-div'>
                 <span className='shortenedURL' id='shortenedURL1'>{item.shortenedURL}</span>
-                <button onClick={handleCopyClick} className={isCopied ? 'copied-btn' : 'primary-btn'} >{isCopied ? "Copied!" : "Copy"}</button>
+                <CopyToClipboard text={item.shortenedURL}>
+                    <button onClick={handleCopyClick} className={isCopied ? 'copied-btn' : 'primary-btn'} >{isCopied ? "Copied!" : "Copy"}</button>
+                </CopyToClipboard>
+
             </div>
 
         </li>
     );
 };
-
-
-ItemComponent.propTypes = {
-
-};
-
 
 export default ItemComponent;

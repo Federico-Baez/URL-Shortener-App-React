@@ -76,7 +76,7 @@ const LinkShortenerFormik = ({ add }) => {
 
 
 LinkShortenerFormik.propTypes = {
-
+    add: PropTypes.func.isRequired
 };
 
 

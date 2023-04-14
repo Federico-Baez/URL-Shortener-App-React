@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import logo from '../../design/images/logo.svg';
 
 
@@ -24,11 +23,5 @@ const Header = () => {
         </div>
     );
 };
-
-
-Header.propTypes = {
-
-};
-
 
 export default Header;

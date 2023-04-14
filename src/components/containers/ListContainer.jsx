@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import LinkShortenerFormik from '../pure/LinkShortenerFormik';
 import { readLocalStorage, setLocalStorage } from '../../localStorage';
 import ItemComponent from '../pure/Item';
@@ -33,11 +32,5 @@ const ListContainer = () => {
         </div>
     );
 };
-
-
-ListContainer.propTypes = {
-
-};
-
 
 export default ListContainer;
