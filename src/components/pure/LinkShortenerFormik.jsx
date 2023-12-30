@@ -18,12 +18,16 @@ const LinkShortenerFormik = ({ add }) => {
         /* shortenLink(`/shorten?url=${OriginalURL}`) */
         shortenLink(`${OriginalURL}`)
             .then((response) => {
-                if (response.status === 201) {
-                    const newItem = new Item(OriginalURL, response.data.result.short_link);
-                    add(newItem);
+                if (response.status === 200) {
+                return response.json();
                 } else {
-                    throw new Error('Shortening link failed');
+                throw new Error('Shortening link failed');
                 }
+            })
+            .then((data) => {
+                const newItem = new Item(OriginalURL, data.shortURL);
+                add(newItem);
+                return data;
             })
             .catch((error) => {
                 alert(`Something went wrong shortening the link: ${error}`)

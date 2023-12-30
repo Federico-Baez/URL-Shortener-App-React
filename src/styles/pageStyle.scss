@@ -458,4 +458,78 @@
     }
 }
 
+.botonero{
+    &:focus{
+        outline-color: black;
+        outline-width: 10px;
+        outline-style: solid;
+    }
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #root {
+    width:100%;
+    height: 100%;
+    position: absolute;
+    flex-grow: 1;
+    top: 0;
+    left: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+:root {
+    --blue-copal: #283549;
+    --grey-copal: #FAFAFA;
+    --dark-grey-copal: #747474;
+    --grey-copal-hover: #fafafa2d;
+    --green-copal: #67b4c0;
+    --green-copal-hover: #a7c7ce;
+    --white-copal: #FFFFFF;
+    --red-copal: #d55453;
+    --focus-copal: #a7c7cea4;
+  }
+.copal-icon-button{
+    background-color: aquamarine;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 222px;
+    height: 48px;
+    flex-shrink: 0;
+  
+    transition: outline .1s ease;
+  
+    &:hover{
+      background-color: var(--green-copal-hover);
+      cursor: pointer;
+      transition: background-color .35s ease;
+  
+    } 
+    
+    &:focus{
+    /* outline: none; */
+      /* outline-color: var(--focus-copal); */
+      /* outline-color: black;
+      outline-width: 10px;
+      outline-style: solid; */
+  
+  
+      outline: var(--focus-copal) solid 4px;
+      /* box-shadow: 0px 0px 0px 4px greenyellow; */
+      /* transition: outline .1s ease; */
+    } 
+  }
+
 @media (max-width: 1225px) {}

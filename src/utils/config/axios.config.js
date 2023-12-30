@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export default axios.create(
     {
-        baseURL: "https://api.shrtco.de/v2/",
+        baseURL: "https://api.short.io/links",
         responseType: 'json',
         timeout: 6000,
         headers: {
