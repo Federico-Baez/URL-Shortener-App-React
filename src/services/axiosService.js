@@ -8,7 +8,7 @@ export function shortenLink(url) {
     headers: {
       accept: 'application/json',
       'content-type': 'application/json',
-      Authorization: 'sk_ChJD3PfQ4o4oxdVj'
+      Authorization: 'pk_fSQIFE8tIjCmqIpC'
     },
     body: JSON.stringify({
       domain: 'ctjq.short.gy',
@@ -17,5 +17,5 @@ export function shortenLink(url) {
     })
   };
 
-  return fetch('https://api.short.io/links', options)
+  return fetch('https://api.short.io/links/public', options)
 }
